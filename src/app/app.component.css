@@ -46,7 +46,9 @@ p {
     background-color: lightgray;
    
 }
-
+.totaltab{
+  margin-top:-6px;
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -82,7 +84,7 @@ p {
 }
 
 .vl {
-  border-left: 6px solid green;
+  border-left: 6px solid white;
   height: 500px;
   background-color: white;
 }
