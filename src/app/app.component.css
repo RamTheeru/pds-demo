@@ -6,8 +6,10 @@ p {
     display: block;
     margin-right: 20px;
     border-bottom:0;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid lightgray;
     padding-right: 15px;
+    background-color: lightgray;
+    padding-bottom: 336px;
 }
 .nav-tabs .nav-link {
     border: 1px solid transparent;
@@ -17,9 +19,10 @@ p {
 }
 
 .nav-tabs .nav-link.active {
-    color: #495057;
-    background-color:lightgreen !important;
+    color: lightgray;
+    background-color:white !important;
     border-color: transparent !important;
+  
 }
 .nav-tabs .nav-link {
     border: 1px solid transparent;
@@ -28,8 +31,9 @@ p {
 }
 .tab-content>.active {
     display: block;
-    background:lightgreen;
+    background:lightgray;
     min-height: 165px;
+     margin-left: -98px;
 }
 .nav.nav-tabs {
     float: left;
@@ -38,6 +42,8 @@ p {
     border-bottom: 0;
     border-right: 1px solid transparent;
     padding-right: 15px;
+    background-color: lightgray;
+   
 }
 
 
@@ -72,4 +78,10 @@ p {
 /* Right-aligned section inside the top navigation */
 .topnav-right {
   float: right;
+}
+
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+  background-color: white;
 }
