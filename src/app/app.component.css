@@ -4,12 +4,13 @@ p {
 .nav.nav-tabs {
     float: left;
     display: block;
-    margin-right: 20px;
+    margin-right: 15px;
     border-bottom:0;
     border-right: 1px solid lightgray;
     padding-right: 15px;
     background-color: lightgray;
     padding-bottom: 336px;
+    margin-left:6px;
 }
 .nav-tabs .nav-link {
     border: 1px solid transparent;
@@ -49,7 +50,7 @@ p {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: darkgray;
     overflow: hidden;
 }
 
