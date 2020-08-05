@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 const appRoutes : Routes=[
    //{path :'',redirectTo : '/recipes',pathMatch :'full'},
 {path :'',component : HomeComponent},
-
+{path :'home',component : HomeComponent},
    {path :'login',component : PdsMainComponent}
 
 ];

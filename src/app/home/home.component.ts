@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+img : string ;
   constructor() { }
 
   ngOnInit() {
+    this.img = 'https://github.com/RamTheeru/pds/blob/master/src/app/images/pdslogo.jpeg?raw=true'
   }
 
 }
