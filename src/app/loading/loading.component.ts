@@ -29,13 +29,18 @@ const fadeOut = trigger('fadeOut', [
 @Component({
   selector: 'app-loading',
   templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.css']
+  styleUrls: ['./loading.component.css'],
 })
 export class LoadingComponent implements OnInit {
  @Input('deliver') loading:boolean = false;
-  constructor() { }
+
+  constructor() {
+
+   }
 
   ngOnInit() {
+    
+
   }
 
 }

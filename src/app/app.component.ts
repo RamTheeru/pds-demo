@@ -33,13 +33,32 @@ export class AppComponent  {
 
   // // Shows and hides the loading spinner during RouterEvent changes
    navigationInterceptor(event: RouterEvent): void {
-     this.load = true;
+     //this.load = true;
    
-     
-     setTimeout( () => { 
-      this.load = false;
+      if (event instanceof NavigationStart) {
+      this.load = true;
+    }
+    if (event instanceof NavigationEnd) {
+      setTimeout(() => { // here
+        this.load = false;
+      }, 2000);
+    }
+
+    // Set loading state to false in both of the below events to hide the spinner in case a request fails
+    if (event instanceof NavigationCancel) {
+      setTimeout(() => { // here
+        this.load = false;
+      }, 2000);
+    }
+    if (event instanceof NavigationError) {
+      setTimeout(() => { // here
+        this.load = false;
+      }, 2000);
+    }
+    //  setTimeout( () => { 
+    //   this.load = false;
       
-     },7000)
+    //  },7000)
   //   setTimeout( () => { /*Your Code*/ 
   //   if (event instanceof NavigationStart) {
   //     this.loading = true

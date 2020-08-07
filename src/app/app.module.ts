@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import {Routes,RouterModule,PreloadAllModules} from '@angular/router';
 import { AppComponent } from './app.component';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {appRoutingModule} from './app-routing.module';
 
 import { PdsMainComponent } from './pds-main/pds-main.component';
@@ -13,7 +13,7 @@ import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,appRoutingModule ],
+  imports:      [ BrowserModule, FormsModule,appRoutingModule,BrowserAnimationsModule ],
   declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent ],
   bootstrap:    [ AppComponent ]
 })
