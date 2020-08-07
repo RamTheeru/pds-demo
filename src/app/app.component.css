@@ -52,7 +52,7 @@ p {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: darkgray;
+    background-color: green;
     overflow: hidden;
 }
 

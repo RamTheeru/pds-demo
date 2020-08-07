@@ -30,6 +30,10 @@ const fadeOut = trigger('fadeOut', [
   selector: 'app-loading',
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.css'],
+   animations: [
+    fadeIn,
+    fadeOut
+  ]
 })
 export class LoadingComponent implements OnInit {
  @Input('deliver') loading:boolean = false;

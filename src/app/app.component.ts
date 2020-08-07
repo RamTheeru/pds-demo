@@ -6,10 +6,19 @@ import {Router,Event as RouterEvent,
   NavigationError
 
 } from '@angular/router';
+import { transition, style, animate, trigger } from '@angular/animations';
 
-
-
-
+const leaveTrans = transition(':leave', [
+  style({
+    opacity: 1
+  }),
+  animate('1s ease-out', style({
+    opacity: 0
+  }))
+])
+const fadeOut = trigger('fadeOut', [
+  leaveTrans
+]);
 
 
 
