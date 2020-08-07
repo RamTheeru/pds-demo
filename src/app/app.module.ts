@@ -4,19 +4,15 @@ import { FormsModule } from '@angular/forms';
 import {Routes,RouterModule,PreloadAllModules} from '@angular/router';
 import { AppComponent } from './app.component';
 
+import {appRoutingModule} from './app-routing.module';
+
 import { PdsMainComponent } from './pds-main/pds-main.component';
 import { HomeComponent } from './home/home.component';
 
 
-const appRoutes : Routes=[
-   //{path :'',redirectTo : '/recipes',pathMatch :'full'},
-{path :'',component : HomeComponent},
-{path :'home',component : HomeComponent},
-   {path :'login',component : PdsMainComponent}
 
-];
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(appRoutes,{preloadingStrategy:PreloadAllModules}) ],
+  imports:      [ BrowserModule, FormsModule,appRoutingModule ],
   declarations: [ AppComponent, PdsMainComponent, HomeComponent ],
   bootstrap:    [ AppComponent ]
 })
