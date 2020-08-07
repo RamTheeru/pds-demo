@@ -8,12 +8,13 @@ import {appRoutingModule} from './app-routing.module';
 
 import { PdsMainComponent } from './pds-main/pds-main.component';
 import { HomeComponent } from './home/home.component';
+import { LoadingComponent } from './loading/loading.component';
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,appRoutingModule ],
-  declarations: [ AppComponent, PdsMainComponent, HomeComponent ],
+  declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

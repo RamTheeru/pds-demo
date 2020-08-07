@@ -6,36 +6,12 @@ import {Router,Event as RouterEvent,
   NavigationError
 
 } from '@angular/router';
-import { transition, style, animate, trigger } from '@angular/animations';
 
 
 
 
-const enterTransition = transition(':enter', [
-  style({
-    opacity: 0
-  }),
-  animate('1s ease-in', style({
-    opacity: 1
-  }))
-]);
 
-const leaveTrans = transition(':leave', [
-  style({
-    opacity: 1
-  }),
-  animate('1s ease-out', style({
-    opacity: 0
-  }))
-])
 
-const fadeIn = trigger('fadeIn', [
-  enterTransition
-]);
-
-const fadeOut = trigger('fadeOut', [
-  leaveTrans
-]);
 
 @Component({
   selector: 'my-app',
@@ -46,7 +22,7 @@ export class AppComponent  {
   name = 'Angular ' + VERSION.major;
 
    // Sets initial value to true to show loading spinner on first load
-  loading = true
+  load = true
 
   constructor(private router: Router) {
     this.router.events.subscribe((e : RouterEvent) => {
@@ -57,11 +33,11 @@ export class AppComponent  {
 
   // // Shows and hides the loading spinner during RouterEvent changes
    navigationInterceptor(event: RouterEvent): void {
-     this.loading = true;
+     this.load = true;
    
      
      setTimeout( () => { 
-      this.loading = false;
+      this.load = false;
       
      },7000)
   //   setTimeout( () => { /*Your Code*/ 
