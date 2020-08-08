@@ -6,20 +6,9 @@ import {Router,Event as RouterEvent,
   NavigationError
 
 } from '@angular/router';
-import { transition, style, animate, trigger } from '@angular/animations';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+//import { transition, style, animate, trigger } from '@angular/animations';
+//import {HttpClient, HttpHeaders} from "@angular/common/http";
 
-const leaveTrans = transition(':leave', [
-  style({
-    opacity: 1
-  }),
-  animate('1s ease-out', style({
-    opacity: 0
-  }))
-])
-const fadeOut = trigger('fadeOut', [
-  leaveTrans
-]);
 
 
 
@@ -29,22 +18,14 @@ const fadeOut = trigger('fadeOut', [
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  headers
+  
   name = 'Angular ' + VERSION.major;
     
    // Sets initial value to true to show loading spinner on first load
   load = true
 
-  constructor(http:HttpClient,private router: Router) {
-     this.headers = new HttpHeaders();
-    this.headers = this.headers
-      .set('Access-Control-Allow-Origin', "*");
-      //.set("Content-Type", "application/json")
-      //.set("Access-Control-Expose-Headers", "Content-Length");
+  constructor(private router: Router) {
 
-  
-
-    http.get('/sdfsdfsdffsdf',{headers:this.headers}).toPromise(); 
 
     this.router.events.subscribe((e : RouterEvent) => {
       this.navigationInterceptor(e);
