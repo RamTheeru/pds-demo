@@ -5,7 +5,7 @@ import {Routes,RouterModule,PreloadAllModules} from '@angular/router';
 import { AppComponent } from './app.component';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {appRoutingModule} from './app-routing.module';
-import {HttpClientModule} from "@angular/common/http";
+//import {HttpClientModule} from "@angular/common/http";
 
 import { PdsMainComponent } from './pds-main/pds-main.component';
 import { HomeComponent } from './home/home.component';
@@ -15,7 +15,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,appRoutingModule,HttpClientModule ],
+  imports:      [ BrowserModule, FormsModule,appRoutingModule ],
   declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent ],
   bootstrap:    [ AppComponent ]
 })
