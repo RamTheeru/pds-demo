@@ -3,6 +3,7 @@ p {
 }
 #myTab{
   padding-bottom: 418px;
+  padding-right: 1px;
 }
 .nav.nav-tabs {
     float: left;
@@ -10,7 +11,7 @@ p {
     margin-right: 15px;
     border-bottom:0;
     border-right: 1px solid lightgray;
-    padding-right: 15px;
+    padding-right: 1px;
     background-color: lightgray;
     padding-bottom: 336px;
     margin-left:6px;
