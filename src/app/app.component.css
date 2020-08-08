@@ -20,9 +20,11 @@ p {
 }
 
 .nav-tabs .nav-link.active {
-    color: lightgray;
+
     background-color:white !important;
     border-color: transparent !important;
+    padding-right: 45px;
+    
   
 }
 .nav-tabs .nav-link {
@@ -32,9 +34,10 @@ p {
 }
 .tab-content>.active {
     display: block;
-    background:lightgray;
+    background:white;
     min-height: 165px;
      margin-left: -98px;
+    
 }
 .nav.nav-tabs {
     float: left;
@@ -84,7 +87,7 @@ p {
 }
 
 .vl {
-  border-left: 6px solid white;
+  border-left: 6px solid lightgray;
   height: 500px;
   background-color: white;
 }

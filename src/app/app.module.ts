@@ -9,12 +9,13 @@ import {appRoutingModule} from './app-routing.module';
 import { PdsMainComponent } from './pds-main/pds-main.component';
 import { HomeComponent } from './home/home.component';
 import { LoadingComponent } from './loading/loading.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,appRoutingModule,BrowserAnimationsModule ],
-  declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent ],
+  declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
