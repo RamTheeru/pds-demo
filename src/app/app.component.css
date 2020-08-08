@@ -1,6 +1,9 @@
 p {
   font-family: Lato;
 }
+#myTab{
+  padding-bottom: 418px;
+}
 .nav.nav-tabs {
     float: left;
     display: block;
@@ -24,7 +27,7 @@ p {
     background-color:white !important;
     border-color: transparent !important;
     padding-right: 45px;
-    
+    color:green;
   
 }
 .nav-tabs .nav-link {
