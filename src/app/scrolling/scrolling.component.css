@@ -8,6 +8,7 @@
     .scrolling-text {
       position: absolute;
       white-space: nowrap;
+      color:brown;
     }
 
     /* Below doesn't work to pause */
