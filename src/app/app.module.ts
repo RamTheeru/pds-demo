@@ -11,12 +11,13 @@ import { PdsMainComponent } from './pds-main/pds-main.component';
 import { HomeComponent } from './home/home.component';
 import { LoadingComponent } from './loading/loading.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { LogintabComponent } from './logintab/logintab.component';
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,appRoutingModule ],
-  declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent ],
+  declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent, LogintabComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
