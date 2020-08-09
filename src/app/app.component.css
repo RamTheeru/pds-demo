@@ -59,14 +59,14 @@ p {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: green;
+    background-color: white;
     overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: rgb(0, 238, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
