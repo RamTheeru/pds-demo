@@ -17,7 +17,7 @@ import { ScrollingComponent } from './scrolling/scrolling.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,appRoutingModule,BrowserAnimationsModule ],
+  imports:      [ BrowserModule, FormsModule,appRoutingModule ],
   declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent, LogintabComponent, ScrollingComponent ],
   bootstrap:    [ AppComponent ]
 })
