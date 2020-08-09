@@ -20,7 +20,7 @@ import {Router,Event as RouterEvent,
 export class AppComponent  {
   
   name = 'Angular ' + VERSION.major;
-    
+    text = 'Welcome to PENNA DELIVERY SERVICES!!!!!!';
    // Sets initial value to true to show loading spinner on first load
   load = true
 

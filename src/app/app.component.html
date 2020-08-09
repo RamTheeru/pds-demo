@@ -9,11 +9,14 @@
 	
 
       <div class="container-fluid">
+       
+           
+          
             <div  class="row">
               <app-loading [deliver]="load" ></app-loading>
             </div>
 
-    
+          
             <div class="row">
               <div class="col-sm-2">
                       <ul  class="nav nav-pills flex-column">
@@ -45,6 +48,7 @@
             </div>
                 <div class="col-sm-9">
                 <div class="tab-content">
+                   <app-scrolling [txt]="text"></app-scrolling>
                   <div class="tab-pane active" id="home" role="tabpanel">
                     <!-- <app-home></app-home> -->
                     <!-- <app-aboutus></app-aboutus> -->
