@@ -15,12 +15,15 @@ import { LogintabComponent } from './logintab/logintab.component';
 import { ScrollingComponent } from './scrolling/scrolling.component';
 import { RegisterComponent } from './register/register.component';
 import { AbtusComponent } from './abtus/abtus.component';
+import { ViewService } from './view.service';
+
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,appRoutingModule ],
   declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent, LogintabComponent, ScrollingComponent, RegisterComponent, AbtusComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ViewService]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, VERSION, OnInit,OnDestroy } from '@angular/core';
 import {Router,Event as RouterEvent,
   NavigationStart,
   NavigationEnd,
@@ -6,6 +6,8 @@ import {Router,Event as RouterEvent,
   NavigationError
 
 } from '@angular/router';
+//import * as r from  'rxjs';
+import {ViewService} from './view.service';
 //import { transition, style, animate, trigger } from '@angular/animations';
 //import {HttpClient, HttpHeaders} from "@angular/common/http";
 
@@ -17,21 +19,22 @@ import {Router,Event as RouterEvent,
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
-  
+export class AppComponent implements OnInit,OnDestroy  {
+  url='';
+  tabView : Boolean = true;  
   name = 'Angular ' + VERSION.major;
     text = 'Welcome to PENNA DELIVERY SERVICES!!!!!!';
    // Sets initial value to true to show loading spinner on first load
   load = true
-
-  constructor(private router: Router) {
+//subsc : r.Subscription;
+  constructor(private router: Router,private vServ:ViewService) {
 
 
     this.router.events.subscribe((e : RouterEvent) => {
       this.navigationInterceptor(e);
      })
   }
-  
+ ngOnInit() {}
 
   // // Shows and hides the loading spinner during RouterEvent changes
    navigationInterceptor(event: RouterEvent): void {
@@ -41,6 +44,19 @@ export class AppComponent  {
       this.load = true;
     }
     if (event instanceof NavigationEnd) {
+        console.log(event.urlAfterRedirects)
+        this.url = event.urlAfterRedirects;
+        if(this.url == '/register')
+        {
+          this.tabView = false;
+            //   this.subsc = this.vServ.view.subscribe(
+            //   (val:Boolean)=>{
+            //     this.tabView = val;
+            //   }
+            // );
+
+        }
+        else{this.tabView=true;}
       setTimeout(() => { // here
         this.load = false;
       }, 2000);
@@ -78,4 +94,7 @@ export class AppComponent  {
   //   }
   //   }, 7000 );
    }
+     ngOnDestroy(){
+    //this.subsc.unsubscribe();
+  }
 }

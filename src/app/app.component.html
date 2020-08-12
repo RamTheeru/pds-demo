@@ -9,7 +9,7 @@
 	
 
       <div class="container-fluid">
-       
+      
            
           
             <div  class="row">
@@ -18,49 +18,42 @@
 
           
             <div class="row">
-              <div class="col-sm-2">
+              <div *ngIf="tabView" class="col-sm-2">
                       <ul  class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" routerLink="/" role="tab" aria-controls="home"><b>Home</b></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" routerLink="/aboutus"  role="tab" aria-controls="aboutus"><b>About Us</b></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" routerLink="/vision"  role="tab" aria-controls="vm"><b>Vision & Mission</b></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" routerLink="/aboutus"  role="tab" aria-controls="careers"><b>Careers</b></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" routerLink="/aboutus"  role="tab" aria-controls="contactus"><b>Contact Us</b></a>
-        </li>
-      </ul>
-            <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" routerLink="/" role="tab" aria-controls="home"><b>Home</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" routerLink="/aboutus"  role="tab" aria-controls="Aboutsus"><b>About Us</b></a>
-            </li>
-     
-          </ul> -->
-          </div>
-          <div class="col-sm-1">
-            <div class="vl"></div>
-            </div>
-                <div class="col-sm-9">
-                <div class="tab-content">
-                   <!-- <app-scrolling [txt]="text"></app-scrolling> -->
-                  <div class="tab-pane active" id="home" role="tabpanel">
-                    <!-- <app-home></app-home> -->
-                    <!-- <app-aboutus></app-aboutus> -->
-                    <router-outlet></router-outlet>
-                    </div>
-                  <!-- <div class="tab-pane" id="profile" role="tabpanel">..2.</div>
-                  <div class="tab-pane" id="messages" role="tabpanel">.3..</div>
-                  <div class="tab-pane" id="settings" role="tabpanel">.4..</div> -->
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" routerLink="/" role="tab" aria-controls="home"><b>Home</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" routerLink="/aboutus"  role="tab" aria-controls="aboutus"><b>About Us</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" routerLink="/vision"  role="tab" aria-controls="vm"><b>Vision & Mission</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" routerLink="/aboutus"  role="tab" aria-controls="careers"><b>Careers</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" routerLink="/aboutus"  role="tab" aria-controls="contactus"><b>Contact Us</b></a>
+                      </li>
+                    </ul>
+        
                 </div>
+                <div *ngIf="tabView" class="col-sm-1">
+                  <div class="vl"></div>
+                  </div>
+
+                <div class="col-sm-9">
+                    <div class="tab-content">
+                      <!-- <app-scrolling [txt]="text"></app-scrolling> -->
+                      <div class="tab-pane active" id="home" role="tabpanel">
+                        <!-- <app-home></app-home> -->
+                        <!-- <app-aboutus></app-aboutus> -->
+                        <router-outlet></router-outlet>
+                        </div>
+                      <!-- <div class="tab-pane" id="profile" role="tabpanel">..2.</div>
+                      <div class="tab-pane" id="messages" role="tabpanel">.3..</div>
+                      <div class="tab-pane" id="settings" role="tabpanel">.4..</div> -->
+                    </div>
                 </div>
           </div>
 
@@ -72,7 +65,7 @@
 
   
 
-<div class="container-fluid">
+<div  *ngIf="tabView" class="container-fluid">
   <div class="jumbotron text-center" style="margin-bottom:0;background-color:green;">
   <p class="text-light"><b style="font-size: 25px;">“People expect good service but few are willing to give it.”</b></p>
 </div>
