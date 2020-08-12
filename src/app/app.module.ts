@@ -13,12 +13,13 @@ import { LoadingComponent } from './loading/loading.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { LogintabComponent } from './logintab/logintab.component';
 import { ScrollingComponent } from './scrolling/scrolling.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,appRoutingModule ],
-  declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent, LogintabComponent, ScrollingComponent ],
+  declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent, LogintabComponent, ScrollingComponent, RegisterComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
