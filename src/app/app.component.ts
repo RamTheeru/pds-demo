@@ -6,6 +6,7 @@ import {Router,Event as RouterEvent,
   NavigationError
 
 } from '@angular/router';
+import {PdsApiService} from './pds-api.service';
 //import * as r from  'rxjs';
 import {ViewService} from './view.service';
 //import { transition, style, animate, trigger } from '@angular/animations';
@@ -25,16 +26,25 @@ export class AppComponent implements OnInit,OnDestroy  {
   name = 'Angular ' + VERSION.major;
     text = 'Welcome to PENNA DELIVERY SERVICES!!!!!!';
    // Sets initial value to true to show loading spinner on first load
-  load = true
+  load = true;
+  users :any ;
 //subsc : r.Subscription;
-  constructor(private router: Router,private vServ:ViewService) {
+  constructor(private router: Router,private vServ:ViewService,
+  private api:PdsApiService) {
 
 
     this.router.events.subscribe((e : RouterEvent) => {
       this.navigationInterceptor(e);
      })
   }
- ngOnInit() {}
+ ngOnInit() {
+    this.api.getClients()
+        .subscribe(data =>{
+          console.log(data); 
+        
+           }
+           );
+ }
 
   // // Shows and hides the loading spinner during RouterEvent changes
    navigationInterceptor(event: RouterEvent): void {
@@ -44,7 +54,7 @@ export class AppComponent implements OnInit,OnDestroy  {
       this.load = true;
     }
     if (event instanceof NavigationEnd) {
-        console.log(event.urlAfterRedirects)
+        //console.log(event.urlAfterRedirects)
         this.url = event.urlAfterRedirects;
         if(this.url == '/register')
         {
