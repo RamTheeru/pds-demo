@@ -14,7 +14,10 @@ export class PdsApiService {
      constructor(private http: HttpClient) { }
       httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+        //'X-Requested-With': 'XMLHttpRequest',
+      'access-Control-Allow-Origin': '*'
+       //'access-Control-Allow-Methods:':'GET,POST,OPTIONS,DELETE,PUT'
     })
   }
    getClients() :  R.Observable<any>  {
