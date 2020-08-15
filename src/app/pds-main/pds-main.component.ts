@@ -12,8 +12,8 @@ export class PdsMainComponent implements OnInit {
   constructor(private vServ:ViewService) { }
 
   ngOnInit() {
-   this.img = '../images/pdslogo.jpeg';
-    // this.img = 'https://github.com/RamTheeru/pds/blob/master/src/app/images/pdslogo.jpeg?raw=true'
+  
+     this.img = 'https://github.com/RamTheeru/pds/blob/master/src/app/images/pdslogo.jpeg?raw=true';
    
   }
   // onRegister(){
