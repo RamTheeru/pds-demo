@@ -13,9 +13,15 @@ empForm : FormGroup;
     { id: 1, name: 'Un Married' }
 
   ];
+    empTypes = [
+    { id: 0, name: 'Permanent' },
+    { id: 1, name: 'Contract' }
+
+  ];
   constructor(private _fb:FormBuilder) {
      this.initForm();
     this.addCheckboxes();
+    this.addCheckboxes_t();
    }
 
   ngOnInit() {
@@ -25,8 +31,24 @@ empForm : FormGroup;
 
 initForm(){
   this.empForm = this._fb.group({
-   // firstName: new FormControl(),
-      mars:new FormArray([])
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    middleName: new FormControl(),
+     day: new FormControl(),
+      month: new FormControl(),
+       year: new FormControl(),
+        age: new FormControl(),
+        bg: new FormControl(),
+         gender: new FormControl(),
+      mars:new FormArray([]),
+       ad1: new FormControl(),
+        ad2: new FormControl(),
+         place: new FormControl(),
+          state: new FormControl(),
+           postal: new FormControl(),
+            aad: new FormControl(),
+        pan: new FormControl(),
+        typs : new FormArray([]),
     });
 }
  get maritalsFormArray() {
@@ -34,6 +56,12 @@ initForm(){
   }
  private addCheckboxes() {
     this.maritals.forEach(() => this.maritalsFormArray.push(new FormControl(false)));
+  }
+   private addCheckboxes_t() {
+    this.empTypes.forEach(() => this.maritalsFormArray.push(new FormControl(false)));
+  }
+   get typsFormArray() {
+    return this.empForm.controls.typs as FormArray;
   }
   onSubmit(){
     const selectedmaritals = this.empForm.value.mars
