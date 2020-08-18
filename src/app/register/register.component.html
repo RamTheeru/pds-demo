@@ -2,17 +2,15 @@
   <h1 class="text-primary"><u>Employee Registration Form:</u></h1>
    <button type="submit" style="float:right;background-color:blue;" ><a routerLink="/home"><b class="text-light" >Go to Home >></b></a></button>
   <!-- <a role="button" routerLink="/home" style="float:right;" ><span class="badge badge-primary"><b>Go to Home</b></span></a> -->
-   <form class="form-horizontal" role="form">
+   <form class="form-horizontal" [formGroup]="empForm" (ngSubmit)="onSubmit()" role="form">
   <div class="row">
     <div class="col">
-       <!-- Name Section -->
-           <!-- Form Name -->
+   
           <legend>Personal Information Details</legend>
 
-          <!-- Text input-->
           <div class="form-group">
             <div class="col-sm-6">
-              <input type="text" name="fistName" placeholder="First Name" class="form-control">
+              <input type="text" name="fistName"  formControlName="firstName" placeholder="First Name" class="form-control">
             </div>
             <div class="col-sm-6">
               <input type="text" name="middleName" placeholder="Middle Name" class="form-control">
@@ -22,7 +20,7 @@
             </div>
           </div>
 
-          <!-- Text input-->
+        
           <div class="form-group">
             <div class="col-md-10">
               <legend>Date Of Birth</legend>
@@ -53,7 +51,7 @@
                    <input type="text" name="year" placeholder="Year" class="form-control">
               </div>
               </div>
-              <!-- <input type="date" placeholder="Date Of Birth" class="form-control"> -->
+            
             </div>
             </div>
              <div class="form-group">
@@ -65,7 +63,7 @@
             </div>
           </div>
           
-          <!-- Text input-->
+       
           <div class="form-group">
             <div class="col-sm-4">
               <select type="gender" placeholder="Gender" class="form-control">
@@ -77,12 +75,16 @@
           </div>
             <legend>Marital Status</legend>
             <div class="form-group">
-                <div class="col-sm-6">
-                  <input type="checkbox" name="VietNgu">Married
-                </div>
-                <div class="col-sm-6">
-                  <input type="checkbox" name="Math">Un Married
-                </div>
+                  <div class="col-sm-6"  formArrayName="mars" *ngFor="let c of maritalsFormArray.controls; let i = index">
+                   
+                    <input type="checkbox"  [formControlName]="i">{{maritals[i].name}}
+                     </div>
+               
+                  
+               
+                <!-- <div class="col-sm-6">
+                  <input type="checkbox"  name="Math" value="t">Un Married
+                </div> -->
              
           </div>
 
@@ -128,10 +130,10 @@
            <legend>Employee Type</legend>
             <div class="form-group">
                 <div class="col-sm-6">
-                  <input type="checkbox" name="VietNgu">Permanent
+                  <input type="checkbox" ngModel name="VietNgu">Permanent
                 </div>
                 <div class="col-sm-6">
-                  <input type="checkbox" name="Math">Contract
+                  <input type="checkbox" ngModel name="Math">Contract
                 </div>
              
           </div>
