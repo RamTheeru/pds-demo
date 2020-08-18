@@ -49,6 +49,18 @@ initForm(){
             aad: new FormControl(),
         pan: new FormControl(),
         typs : new FormArray([]),
+            gfirstName: new FormControl(),
+    glastName: new FormControl(),
+    gmiddleName: new FormControl(),
+    gphone : new FormControl(),
+         day2: new FormControl(),
+      month2: new FormControl(),
+       year2: new FormControl(),
+        ut: new FormControl(),
+         desg: new FormControl(),
+          station: new FormControl(),
+           location: new FormControl()
+        
     });
 }
  get maritalsFormArray() {
@@ -58,7 +70,7 @@ initForm(){
     this.maritals.forEach(() => this.maritalsFormArray.push(new FormControl(false)));
   }
    private addCheckboxes_t() {
-    this.empTypes.forEach(() => this.maritalsFormArray.push(new FormControl(false)));
+    this.empTypes.forEach(() => this.typsFormArray.push(new FormControl(false)));
   }
    get typsFormArray() {
     return this.empForm.controls.typs as FormArray;
