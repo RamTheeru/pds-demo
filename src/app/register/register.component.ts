@@ -81,5 +81,13 @@ initForm(){
       .filter(v => v !== null);
       console.log('checkboxes')
     console.log(selectedmaritals);
+
+      const selectempTypes = this.empForm.value.typs
+      .map((checked, i) => checked ? this.empTypes[i].name : null)
+      .filter(v => v !== null);
+      console.log('checkboxes')
+    console.log(selectempTypes);
   }
+
+  
 }
