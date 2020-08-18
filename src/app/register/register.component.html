@@ -28,11 +28,13 @@
               <div class="col5">
 
                        <select type="gender" formControlName="day" placeholder="Date" class="form-control">
+                         <option value="">Select</option>
                          <option *ngFor="let d of dates">{{d}}</option>
               </select>
               </div>
               <div class="col">
                        <select type="gender" formControlName="month" placeholder="Month" class="form-control">
+                         <option value="">Select</option>
                 <option value="1">Jan</option>
                 <option value="2">Feb</option>
                 <option value="2">Mar</option>
@@ -67,6 +69,7 @@
           <div class="form-group">
             <div class="col-sm-4">
               <select type="gender" formControlName="gender" placeholder="Gender" class="form-control">
+                 <option value="">Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 
@@ -171,11 +174,13 @@
                             <div class="col">
                               
                                     <select type="gender" formControlName="day2" placeholder="Date" class="form-control">
+                                      <option value="">Select</option>
                                       <option *ngFor="let d of dates">{{d}}</option>
                                     </select>
                             </div>
                               <div class="col">
                                       <select type="gender" formControlName="month2" placeholder="Month" class="form-control">
+                                        <option value="">Select</option>
                                 <option value="1">Jan</option>
                                 <option value="2">Feb</option>
                                 <option value="2">Mar</option>
