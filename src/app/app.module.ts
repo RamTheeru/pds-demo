@@ -18,6 +18,7 @@ import { RegisterComponent } from './register/register.component';
 import { AbtusComponent } from './abtus/abtus.component';
 import { ViewService } from './view.service';
 import { PdsApiService } from './pds-api.service';
+import { SweetService } from './sweet.service';
 
 
 
@@ -26,6 +27,6 @@ import { PdsApiService } from './pds-api.service';
   imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,HttpClientModule,appRoutingModule ],
   declarations: [ AppComponent, PdsMainComponent, HomeComponent, LoadingComponent, AboutusComponent, LogintabComponent, ScrollingComponent, RegisterComponent, AbtusComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ViewService, PdsApiService]
+  providers: [ViewService, PdsApiService, SweetService]
 })
 export class AppModule { }

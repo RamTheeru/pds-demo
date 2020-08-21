@@ -8,7 +8,7 @@ import {Router,Event as RouterEvent,
 } from '@angular/router';
 import {PdsApiService} from './pds-api.service';
 //import * as r from  'rxjs';
-import {ViewService} from './view.service';
+import {SweetService} from './sweet.service';
 //import { transition, style, animate, trigger } from '@angular/animations';
 //import {HttpClient, HttpHeaders} from "@angular/common/http";
 
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit,OnDestroy  {
   load = true;
   users :any ;
 //subsc : r.Subscription;
-  constructor(private router: Router,private vServ:ViewService,
+  constructor(private router: Router,private swServ:SweetService,
   private api:PdsApiService) {
 
 
@@ -44,6 +44,9 @@ export class AppComponent implements OnInit,OnDestroy  {
         
     //        }
     //        );
+    //this.swServ.showSuccessMessage('Sucess!!','we didit');
+    //this.swServ.showMessage('SomethingWent','wrong');
+    //this.swServ.showWarning('Delete it')
  }
 
   // // Shows and hides the loading spinner during RouterEvent changes
