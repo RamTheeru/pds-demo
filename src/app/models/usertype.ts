@@ -1,5 +1,5 @@
 export class UserType {
-UserType : number;
-UserName : string;
+UserTypeId : number;
+User : string;
 
 }

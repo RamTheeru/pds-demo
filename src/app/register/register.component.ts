@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormBuilder,FormControl,FormArray,Validators} from '@angular/forms';
+
+import {PdsApiService} from '../pds-api.service';
+import {UserType} from '../models/usertype';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,6 +10,7 @@ import {FormGroup,FormBuilder,FormControl,FormArray,Validators} from '@angular/f
 })
 export class RegisterComponent implements OnInit {
 dates =[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+userTypes : UserType[];
 empForm : FormGroup;
   maritals = [
     { id: 0, name: 'Married' },
@@ -18,14 +22,19 @@ empForm : FormGroup;
     { id: 1, name: 'Contract' }
 
   ];
-  constructor(private _fb:FormBuilder) {
+  constructor(private _fb:FormBuilder,private api:PdsApiService) {
      this.initForm();
     this.addCheckboxes();
     this.addCheckboxes_t();
    }
 
   ngOnInit() {
-   
+   this.api.getUserTypes().subscribe(
+     (data)=>{
+          this.userTypes = data.usersTypes;
+     }
+   )
+   console.log('UserTypes :'+this.empTypes );
     //this.addCheckboxes();
   }
 

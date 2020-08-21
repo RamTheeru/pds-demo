@@ -38,12 +38,12 @@ export class AppComponent implements OnInit,OnDestroy  {
      })
   }
  ngOnInit() {
-    this.api.getClients()
-        .subscribe(data =>{
-          console.log(data); 
+    // this.api.getClients()
+    //     .subscribe(data =>{
+    //       console.log(data); 
         
-           }
-           );
+    //        }
+    //        );
  }
 
   // // Shows and hides the loading spinner during RouterEvent changes
