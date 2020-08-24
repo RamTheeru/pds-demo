@@ -29,7 +29,7 @@ export class AppComponent implements OnInit,OnDestroy  {
   load = true;
   users :any ;
 //subsc : r.Subscription;
-  constructor(private router: Router,private swServ:SweetService,
+  constructor(private router: Router,
   private api:PdsApiService) {
 
 
