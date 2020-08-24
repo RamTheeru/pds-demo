@@ -28,13 +28,14 @@ empForm : FormGroup;
     this.addCheckboxes_t();
    }
 
-  ngOnInit() {
-   this.api.getUserTypes().subscribe(
-     (data)=>{
-          this.userTypes = data.usersTypes;
-     }
-   )
-   console.log('UserTypes :'+this.empTypes );
+   ngOnInit() {
+     
+  //  this.api.getUserTypes().subscribe(
+  //    (data)=>{
+  //         this.userTypes = data.usersTypes;
+  //    }
+  //  )
+  //  console.log('UserTypes :'+this.empTypes );
     //this.addCheckboxes();
   }
 
